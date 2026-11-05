@@ -1,0 +1,55 @@
+{
+  "updated": "2026-11-05T21:31:56.985Z",
+  "items": [
+    {
+      "id": "cp",
+      "area": "Financeiro · Contas a Pagar",
+      "title": "Sinalizar os títulos que não devem constar no fluxo de caixa",
+      "status": "Pendente",
+      "owner": "leo",
+      "due": "2026-11-19",
+      "note": "",
+      "updatedAt": "2026-11-05"
+    },
+    {
+      "id": "cr",
+      "area": "Financeiro · Contas a Receber",
+      "title": "Sinalizar os títulos que não devem constar no fluxo de caixa",
+      "status": "Pendente",
+      "owner": "",
+      "due": "",
+      "note": "",
+      "updatedAt": "2026-11-05"
+    },
+    {
+      "id": "fc",
+      "area": "Financeiro · Fluxo de Caixa sem saldo bancário",
+      "title": "Incluir banco fictício sem saldo",
+      "status": "Pendente",
+      "owner": "",
+      "due": "",
+      "note": "",
+      "updatedAt": "2026-11-05"
+    },
+    {
+      "id": "api",
+      "area": "Banco · API de saldo bancário",
+      "title": "Banco liberar documentação da API e ambiente de teste para homologar",
+      "status": "Aguardando terceiro",
+      "owner": "",
+      "due": "",
+      "note": "",
+      "updatedAt": "2026-11-05"
+    },
+    {
+      "id": "com",
+      "area": "Comercial / Faturamento",
+      "title": "Treinamento sobre as funcionalidades do cadastro de orçamento",
+      "status": "Pendente",
+      "owner": "",
+      "due": "",
+      "note": "",
+      "updatedAt": "2026-11-05"
+    }
+  ]
+}
