@@ -1,15 +1,15 @@
 {
-  "updated": "2026-11-05T21:32:11.485Z",
+  "updated": "2026-11-11T14:30:33.781Z",
   "items": [
     {
       "id": "cp",
       "area": "Financeiro · Contas a Pagar",
       "title": "Sinalizar os títulos que não devem constar no fluxo de caixa",
-      "status": "Concluído",
+      "status": "Pendente",
       "owner": "leo",
       "due": "2026-11-19",
       "note": "",
-      "updatedAt": "2026-11-05"
+      "updatedAt": "2026-11-11"
     },
     {
       "id": "cr",
