@@ -222,6 +222,16 @@ function pill(it){var c=cls(it);return'<span class="pill" style="background:var(
 var app=document.getElementById("app");
 
 var BANK_SVG='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 3 8v2h18V8zM5 11v7h2v-7zm4 0v7h2v-7zm4 0v7h2v-7zm4 0v7h2v-7zM3 19v2h18v-2z"/></svg>';
+var BANKS=[["safra","SAFRA"],["brasil","BRASIL"],["santander","SANTANDER"],["itau","ITAU"],["caixa","CAIXA"]];
+var AREA_API="Banco · API de saldo bancário";
+function bankRow(it,dis){
+  if(it.area!==AREA_API)return"";
+  var b=it.bancos||{};
+  return'<div class="checks"><span class="hl">Bancos</span>'+BANKS.map(function(o){
+    var v=b[o[0]]||{};
+    return'<span class="ckd"><label class="ck"><input type="checkbox" id="bk-'+o[0]+'-'+it.id+'" data-id="'+it.id+'" data-bk="'+o[0]+'" data-bf="ok"'+(v.ok?' checked':'')+dis+'>'+o[1]+'</label>'
+      +'<input type="date" id="bd-'+o[0]+'-'+it.id+'" aria-label="Data '+o[1]+'" data-id="'+it.id+'" data-bk="'+o[0]+'" data-bf="date" value="'+esc(v.date)+'"'+dis+'></span>'}).join('')+'</div>';
+}
 var HOLD=[["banco","Banco"],["preserve","Preserve"],["jescipe","Jescipe"]];
 function holdRow(it,dis){
   return'<div class="hold"><span class="hl">Em posse de</span>'+HOLD.map(function(o){
@@ -295,7 +305,7 @@ function render(){
         +'<div class="f obs"><label for="n-'+it.id+'">Observação</label><textarea id="n-'+it.id+'" data-id="'+it.id+'" data-k="note" placeholder="'+(ro?'—':'Andamento, contato, bloqueio…')+'"'+dis+'>'+esc(it.note)+'</textarea></div>'
         +'</div><div class="checks"><span class="ckd"><label class="ck"><input type="checkbox" id="k-valid-'+it.id+'" data-id="'+it.id+'" data-k="valid"'+(it.valid?' checked':'')+dis+'>Validado</label>'
         +'<input type="date" id="vd-'+it.id+'" aria-label="Data da validação" data-id="'+it.id+'" data-k="validDate" value="'+esc(it.validDate)+'"'+dis+'></span>'
-        +'</div><div class="foot"><span>Atualizado em '+br(it.updatedAt)+'</span>'
+        +'</div>'+bankRow(it,dis)+'<div class="foot"><span>Atualizado em '+br(it.updatedAt)+'</span>'
         +(ro?'':'<button class="x'+(armed===it.id?' arm':'')+'" data-del="'+it.id+'">'+(armed===it.id?'Confirmar remoção':'Remover')+'</button>')+'</div>'
         +'</div></div>';
     });
@@ -314,7 +324,13 @@ app.addEventListener("input",function(e){
   var t=e.target,id=t.dataset.id;if(!canWrite)return;
   if(t.dataset.emp){state.empresas[t.dataset.emp]=t.checked;touch();render();return}
   if(!id)return;var it=find(id);if(!it)return;var k=t.dataset.k;
-  if(k==="holder"){it.holder=t.checked?t.dataset.v:""}
+  if(t.dataset.bk){
+    if(!it.bancos||typeof it.bancos!=="object")it.bancos={};
+    var bv=it.bancos[t.dataset.bk]||(it.bancos[t.dataset.bk]={ok:false,date:""});
+    if(t.dataset.bf==="ok"){bv.ok=t.checked;if(t.checked&&!bv.date)bv.date=today();if(!t.checked)bv.date=""}
+    else bv.date=t.value;
+  }
+  else if(k==="holder"){it.holder=t.checked?t.dataset.v:""}
   else if(k==="valid"){it.valid=t.checked;if(t.checked&&!it.validDate)it.validDate=today();if(!t.checked)it.validDate=""}
   else it[k]=t.value;
   it.updatedAt=today();touch();
