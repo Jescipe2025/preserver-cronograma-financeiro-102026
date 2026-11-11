@@ -1,15 +1,18 @@
 {
-  "updated": "2026-11-11T14:31:00.577Z",
+  "updated": "2026-11-11T19:51:56.081Z",
   "items": [
     {
       "id": "cp",
       "area": "Financeiro · Contas a Pagar",
       "title": "Sinalizar os títulos que não devem constar no fluxo de caixa",
-      "status": "Aguardando terceiro",
-      "owner": "leo",
+      "status": "Pendente",
+      "owner": " ",
       "due": "2026-11-19",
       "note": "",
-      "updatedAt": "2026-11-11"
+      "updatedAt": "2026-11-11",
+      "holder": "preserve",
+      "valid": true,
+      "validDate": "2026-11-11"
     },
     {
       "id": "cr",
@@ -29,7 +32,8 @@
       "owner": "",
       "due": "",
       "note": "",
-      "updatedAt": "2026-11-05"
+      "updatedAt": "2026-11-11",
+      "holder": "preserve"
     },
     {
       "id": "api",
@@ -39,17 +43,35 @@
       "owner": "",
       "due": "",
       "note": "",
-      "updatedAt": "2026-11-05"
+      "updatedAt": "2026-11-11",
+      "holder": "banco"
     },
     {
       "id": "com",
-      "area": "Comercial / Faturamento",
+      "area": "Orçamento / Faturamento",
       "title": "Treinamento sobre as funcionalidades do cadastro de orçamento",
       "status": "Pendente",
       "owner": "",
       "due": "",
       "note": "",
       "updatedAt": "2026-11-05"
+    },
+    {
+      "id": "cli",
+      "area": "Orçamento / Faturamento",
+      "title": "Sinalizar cadastro de clientes o Fluxo de Caixa",
+      "status": "Pendente",
+      "owner": "",
+      "due": "",
+      "note": "",
+      "holder": "",
+      "valid": false,
+      "validDate": "",
+      "updatedAt": "2026-11-11"
     }
-  ]
+  ],
+  "empresas": {
+    "08": false
+  },
+  "v": 2
 }
