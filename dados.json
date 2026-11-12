@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T18:22:57.983Z",
+  "updated": "2026-11-12T19:12:54.993Z",
   "items": [
     {
       "id": "cp",
@@ -29,12 +29,14 @@
       "id": "fc",
       "area": "Financeiro · Fluxo de Caixa sem saldo bancário",
       "title": "Incluir banco fictício sem saldo",
-      "status": "Em andamento",
+      "status": "Concluído",
       "owner": "Bruna",
       "due": "",
-      "note": "Email enviado à Contabilidade para abertura de conta contábil, no aguardo do retorno.",
+      "note": "",
       "updatedAt": "2026-11-12",
-      "holder": "preserve"
+      "holder": "preserve",
+      "valid": true,
+      "validDate": "2026-11-12"
     },
     {
       "id": "api",
