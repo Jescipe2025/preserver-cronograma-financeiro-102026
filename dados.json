@@ -1,39 +1,39 @@
 {
-  "updated": "2026-11-11T19:53:14.877Z",
+  "updated": "2026-11-12T18:22:57.983Z",
   "items": [
     {
       "id": "cp",
       "area": "Financeiro · Contas a Pagar",
       "title": "Sinalizar os títulos que não devem constar no fluxo de caixa",
       "status": "Pendente",
-      "owner": " ",
-      "due": "2026-11-19",
+      "owner": " Joyce",
+      "due": "",
       "note": "",
-      "updatedAt": "2026-11-11",
+      "updatedAt": "2026-11-12",
       "holder": "preserve",
-      "valid": true,
-      "validDate": "2026-11-11"
+      "valid": false,
+      "validDate": ""
     },
     {
       "id": "cr",
       "area": "Financeiro · Contas a Receber",
       "title": "Sinalizar os títulos que não devem constar no fluxo de caixa",
       "status": "Pendente",
-      "owner": "",
+      "owner": "Renata",
       "due": "",
       "note": "",
-      "updatedAt": "2026-11-11",
+      "updatedAt": "2026-11-12",
       "holder": "preserve"
     },
     {
       "id": "fc",
       "area": "Financeiro · Fluxo de Caixa sem saldo bancário",
       "title": "Incluir banco fictício sem saldo",
-      "status": "Pendente",
-      "owner": "",
+      "status": "Em andamento",
+      "owner": "Bruna",
       "due": "",
-      "note": "",
-      "updatedAt": "2026-11-11",
+      "note": "Email enviado à Contabilidade para abertura de conta contábil, no aguardo do retorno.",
+      "updatedAt": "2026-11-12",
       "holder": "preserve"
     },
     {
@@ -44,7 +44,7 @@
       "owner": "",
       "due": "",
       "note": "Solicitar aos bancos",
-      "updatedAt": "2026-11-11",
+      "updatedAt": "2026-11-12",
       "holder": "preserve"
     },
     {
@@ -73,7 +73,11 @@
     }
   ],
   "empresas": {
-    "08": false
+    "08": false,
+    "01": true,
+    "04": true,
+    "02": true,
+    "05": true
   },
   "v": 2
 }
